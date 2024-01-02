@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KaTik</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<br>
+    <div id="bersebelahan">
+        <span>KATIK</span>
+        <span>Kalkulator Cantiks</span>
+    </div>
     
+    <div class="welcome">
+        <h2>WELCOME TO KATIK</h2>
+        <h3 id="judul">Hai Sobat, selamat datang di KATIK :) </h3>
+        <p id="teks">Sebuah WEB sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangunan datar</p>
+    </div>
+
+    <!-- INI HITUNG LUAS PERSEGI -->
+    <header class="luasPersegi">
+        <h1>Luas Segitiga</h1>
+    </header>
+    <div class="img">
+        <img src="img/persegi.jpeg" alt="gambar" class="image">
+    </div>
+    <div id="hitungLuasTitle">Rumus Luas Segitiga Yaitu :</div>
+    <div id="Rumus">L = 1/2 x a x t</div>
+    <p>Dimana :</p>
+    <div>a = Panjang Alas</div>
+    <div>t = Tinggi</div>
+    <div class="garis">
+        <hr>
+    </div>
+    <section class="luasInputSection">
+        <label for="inputPanjangAlas">Panjang Alas:</label>
+        <input type="number" id="inputPanjangAlas" placeholder="Masukkan Panjang Alas">
+    
+        <label for="inputTinggi">Tinggi:</label>
+        <input type="number" id="inputTinggi" placeholder="Masukkan Tinggi">
+    </section>
+    <section class="inputButton">
+        <button onclick="hitungLuas()">Hitung</button>
+        <button id="resetButton" onclick="resetLuas()">Reset</button>
+    </section>
+    <div class="hasil">
+        <p>L = 1/2 x a x t</p>
+        <p>L = 1/2 x <span id="sisiValue1">...</span> x <span id="sisiValue2">...</span></p>
+        <p>Luas Segitiga adalah: <span id="luas"></span></p>
+    </div>
+
+    <!-- INI HITUNG KELILING SEGITIGA -->
+    <header class="KelilingSegitiga">
+        <h1 id="hitungKelilingTitle" class="judulKeliling">Keliling Segitiga</h1>
+    </header>
+    <div class="img">
+        <img src="img/persegi.jpeg" alt="gambar" class="image">
+    </div>
+    <div id="RumusKeliling">Rumus Keliling Segitiga Yaitu :</div>
+    <br></br>
+    <div id="Rumus">K = 4 X S</div> 
+    <p>Dimana :</p>
+    <div>K = Keliling</div>
+    <div>S1 = Sisi A</div>
+    <div>S2 = Sisi B</div>
+    <div>S3 = Sisi C</div>
+    <div class="garis">
+        <hr>
+    </div>
+    <section class="kelilingInputSection">
+        <label for="sisiA">Masukkan nilai S1:</label>
+        <input type="number" id="sisiA" placeholder="Masukkan Nilai">
+        <label for="sisiB">Masukkan nilai S2:</label>
+        <input type="number" id="sisiB" placeholder="Masukkan Nilai">
+        <label for="sisiC">Masukkan nilai S3:</label>
+        <input type="number" id="sisiC" placeholder="Masukkan Nilai">
+    </section>
+    <section class="inputButton">
+        <button onclick="hitungKeliling()">Hitung</button>
+        <button onclick="resetKeliling()">Reset</button>
+    </section>
+    <div class="hasil">
+        <p>K = S1 + S2 + S3</p>
+        <p>K = <span id="keliling1">...</span> + <span id="keliling2">...</span> + <span id="keliling3">...</span></p>
+    </div>
+    
+    <p class="kelilingHasil">Keliling Segitiga adalah: <span id="kelilingResult"></span></p>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
